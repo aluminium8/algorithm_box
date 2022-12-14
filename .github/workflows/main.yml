@@ -13,4 +13,8 @@ jobs:
       run: | 
         pwd
         ls
-        clang++
+     - name: test the github actions's behavior
+       run: |
+         cd test_code_for_test_environment
+         clang++ main.cpp -o first_CICD_experience.out
+         ./first_CICD_experience.out
