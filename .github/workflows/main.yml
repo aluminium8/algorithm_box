@@ -13,7 +13,4 @@ jobs:
       run: | 
         pwd
         ls
-    - name: label change test2
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        clang++
