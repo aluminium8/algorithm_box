@@ -9,7 +9,7 @@ void please_input_Hello_world(std::string input_s)
         if (input_s != "Hello_world")
         {
             std::string error_s("input string is not Hello_world!! this is " + input_s);
-            throw error_s.data();
+            throw error_s;
         }
         else
         {
@@ -17,7 +17,7 @@ void please_input_Hello_world(std::string input_s)
 
         }
     }
-    catch (char *e)
+    catch (std::string  e)
     {
         std::cerr << e << '\n';
 
