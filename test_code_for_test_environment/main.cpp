@@ -14,6 +14,7 @@ void please_input_Hello_world(std::string input_s)
         else
         {
             std::cout << input_s << " this is great string!" << std::endl;
+            
         }
     }
     catch (char *e)
