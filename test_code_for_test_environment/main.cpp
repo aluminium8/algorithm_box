@@ -19,7 +19,7 @@ void please_input_Hello_world(std::string input_s)
     }
     catch (std::string  e)
     {
-        std::cerr << e << '\n';
+        std::cout << e << '\n';
 
     }
 }
@@ -32,5 +32,5 @@ int main()
 
     std::cout << "second, I'LL input mistaken string" << std::endl;
     please_input_Hello_world("Hello world");
-    std::cout << "program will end" << std::endl;
+    std::cout << "program will end here" << std::endl;
 }
