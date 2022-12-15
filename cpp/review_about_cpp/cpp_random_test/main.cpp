@@ -3,10 +3,10 @@
 
 int main()
 {
+    std::cout<<"# random number generator"<<std::endl;
 
     std::mt19937 engine_A1(1), engine_A2(1), engine_B1(2);
 
-    
     for (int i = 1; i < 10; i++)
     {
         std::cout << engine_A1() << " ";
