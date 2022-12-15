@@ -25,7 +25,7 @@ jobs:
         pwd
         ls
         touch README.md
-        echo "# algorithm_box's CI CD test\n this README made by github actions" >README.md
+        echo "# algorithm_box's CI CD test\\n this README made by github actions" >README.md
         cd ../
         pwd
         echo "${{ github.actor }}"
