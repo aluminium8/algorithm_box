@@ -2,7 +2,7 @@
 #include <random>
 #include <chrono>
 
-constexpr int make_rnd_num_for_check_value(10), make_rnd_num_for_process_time(1e+7);
+constexpr int make_rnd_num_for_check_value(10), make_rnd_num_for_process_time(5*1e+6);
 
 int main()
 {
@@ -71,8 +71,8 @@ int main()
     std::cout << std::endl;
 
     std::cout << "### processing time on generate " << std::endl;
-    std::cout<<"I'll check for 10^7 generating time on github actions machine\n\nthis value is change at this folder pushed"<<std::endl<<std::endl;
-    std::cout<<"__Note: Be aware that compiler optimizations killed__"<<std::endl<<std::endl;
+    std::cout<<"I'll check for 5*10^6 generating time on github actions machine\n\nthis value is change at this folder pushed"<<std::endl<<std::endl;
+    std::cout<<"__Note: Be aware that compiler optimizations killed and Length of processing time is not stable__"<<std::endl<<std::endl;
     
     std::mt19937 engine_C1(1);
     std::random_device rnd2;
