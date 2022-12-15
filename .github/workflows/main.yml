@@ -18,6 +18,7 @@ jobs:
         cd test_code_for_test_environment
         clang++ main.cpp -o first_CICD_experience.out
         ./first_CICD_experience.out
+        rm -f ./first_CICD_experience.out
     - name: test the github actions's behavior about make README
       run: |
         pwd
@@ -27,9 +28,9 @@ jobs:
         echo "# algorithm_box's CI CD test
         this README made by github actions
         " >README.md
-        first_CICD_experience.out
+        clang++ main.cpp -o first_CICD_experience.out
         ./first_CICD_experience.out>README.md
-        rm ./first_CICD_experience.out
+        rm -f ./first_CICD_experience.out
         sed -e s/\\n/\\n\\n/g README.md
         cd ../
         pwd
