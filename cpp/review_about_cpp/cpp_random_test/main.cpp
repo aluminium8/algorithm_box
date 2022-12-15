@@ -71,7 +71,7 @@ int main()
     std::cout << std::endl;
 
     std::cout << "### processing time on generate " << std::endl;
-    std::cout<<"I'll check for 10^7 generating time on github actions machine"<<std::endl<<std::endl;
+    std::cout<<"I'll check for 10^7 generating time on github actions machine\n\nthis value is change at this folder pushed"<<std::endl<<std::endl;
     std::cout<<"__Note: Be aware that compiler optimizations killed__"<<std::endl<<std::endl;
     
     std::mt19937 engine_C1(1);
