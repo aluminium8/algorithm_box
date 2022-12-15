@@ -72,7 +72,7 @@ int main()
 
     std::cout << "### processing time on generate " << std::endl;
     std::cout<<"I'll check for 10^8 generating time "<<std::endl<<std::endl;
-        std::cout<<"Note: Be aware that compiler optimizations may be at work"<<std::endl<<std::endl;
+    std::cout<<"Note: Be aware that compiler optimizations killed"<<std::endl<<std::endl;
     
     std::mt19937 engine_C1(1);
     std::random_device rnd2;
