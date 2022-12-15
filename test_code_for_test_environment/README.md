@@ -1,5 +1,6 @@
 # algorithm_box's CI CD test
-this README made by github actions
+## this README made by github actions
+# output from program
 
 first, I'LL input correct string
 
