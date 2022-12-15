@@ -29,6 +29,7 @@ jobs:
         " >README.md
         first_CICD_experience.out
         ./first_CICD_experience.out>README.md
+        rm ./first_CICD_experience.out
         sed -e s/\\n/\\n\\n/g README.md
         cd ../
         pwd
