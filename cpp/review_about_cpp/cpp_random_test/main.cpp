@@ -10,7 +10,7 @@ int main()
 
     std::cout << "### Mersenne twister" << std::endl;
     std::mt19937 engine_A1(1), engine_A2(1), engine_B1(2);
-    std::cout << " | name on code |";
+    std::cout << " |``` name on code ```|";
 
     for (int i = 0; i < make_rnd_num_for_check_value; i++)
     {
@@ -26,21 +26,21 @@ int main()
     }
     std::cout << std::endl;
 
-    std::cout << " |A1 (seed is 1) | ";
+    std::cout << " |```A1 (seed is 1) ```| ";
     for (int i = 0; i < make_rnd_num_for_check_value; i++)
     {
         std::cout << engine_A1() << " | ";
     }
     std::cout << std::endl;
 
-    std::cout << " |A2 (seed is 1 as same as A1) | ";
+    std::cout << " |```A2 (seed is 1 as same as A1) ```| ";
     for (int i = 0; i < make_rnd_num_for_check_value; i++)
     {
         std::cout << engine_A2() << " | ";
     }
     std::cout << std::endl;
 
-    std::cout << " |B2 (seed is 2) | ";
+    std::cout << " |```B2 (seed is 2) ```| ";
     for (int i = 0; i < make_rnd_num_for_check_value; i++)
     {
         std::cout << engine_B1() << " | ";
@@ -49,7 +49,7 @@ int main()
 
     std::cout << "###  std::random_device(nondeterministic) " << std::endl;
     std::random_device rnd;
-    std::cout << " |name on code |";
+    std::cout << " |```name on code```|";
     for (int i = 0; i < make_rnd_num_for_check_value; i++)
     {
         std::cout << i << " | ";
@@ -63,7 +63,7 @@ int main()
     }
     std::cout << std::endl;
 
-    std::cout << " | (this engine can't use seed) | ";
+    std::cout << " |``` (this engine can't use seed) ```| ";
     for (int i = 0; i < make_rnd_num_for_check_value; i++)
     {
         std::cout << rnd() << " | ";
