@@ -13,13 +13,13 @@ void please_input_Hello_world(std::string input_s)
         }
         else
         {
-            std::cout << input_s << " this is great string!" << std::endl;
+            std::cout << input_s << " this is great string!" << std::endl<< std::endl;
 
         }
     }
     catch (std::string  e)
     {
-        std::cout << e << '\n';
+        std::cout << e <<  std::endl<< std::endl;
 
     }
 }
@@ -27,10 +27,10 @@ void please_input_Hello_world(std::string input_s)
 int main()
 {
 
-    std::cout << "first, I'LL input correct string" << std::endl;
+    std::cout << "first, I'LL input correct string" << std::endl<< std::endl;
     please_input_Hello_world("Hello_world");
 
-    std::cout << "second, I'LL input mistaken string" << std::endl;
+    std::cout << "second, I'LL input mistaken string" << std::endl<< std::endl;
     please_input_Hello_world("Hello world");
-    std::cout << "program will end here" << std::endl;
+    std::cout << "program will end here" << std::endl<< std::endl;
 }
