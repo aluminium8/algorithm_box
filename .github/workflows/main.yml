@@ -23,7 +23,10 @@ jobs:
         pwd
         cd test_code_for_test_environment
         pwd
-        README.md < echo "# algorithm_box's CI CD test\n this README made by github actions"
+        touch
+        ls
+        touch README.md
+        echo "# algorithm_box's CI CD test\n this README made by github actions" >README.md
         cd ../
         git config --global user.name "${{ github.actor }}"
         git config --global user.email "${{ github.actor }}@users.noreply.github.com"
