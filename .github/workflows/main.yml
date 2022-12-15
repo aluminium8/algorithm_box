@@ -25,7 +25,6 @@ jobs:
         pwd
         touch
         ls
-        touch README.md
         echo "# algorithm_box's CI CD test\n this README made by github actions" >README.md
         cd ../
         git config --global user.name "${{ github.actor }}"
