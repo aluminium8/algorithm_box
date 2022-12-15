@@ -2,7 +2,7 @@
 #include <random>
 #include <chrono>
 
-constexpr int make_rnd_num_for_check_value(10), make_rnd_num_for_process_time(1e+8);
+constexpr int make_rnd_num_for_check_value(10), make_rnd_num_for_process_time(1e+7);
 
 int main()
 {
@@ -71,7 +71,7 @@ int main()
     std::cout << std::endl;
 
     std::cout << "### processing time on generate " << std::endl;
-    std::cout<<"I'll check for 10^8 generating time "<<std::endl<<std::endl;
+    std::cout<<"I'll check for 10^7 generating time "<<std::endl<<std::endl;
     std::cout<<"Note: Be aware that compiler optimizations killed"<<std::endl<<std::endl;
     
     std::mt19937 engine_C1(1);
@@ -95,7 +95,7 @@ int main()
 
     for (int i = 0; i < make_rnd_num_for_process_time; i++)
     {
-        int tmp = engine_C1();
+        int tmp = rnd2();
     }
 
     end = std::chrono::system_clock::now();
