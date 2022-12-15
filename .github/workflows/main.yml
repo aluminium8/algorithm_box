@@ -29,7 +29,7 @@ jobs:
         this README made by github actions
         " >README.md
         clang++ main.cpp -o first_CICD_experience.out
-        ./first_CICD_experience.out>README.md
+        ./first_CICD_experience.out>>README.md
         rm -f ./first_CICD_experience.out
         cd ../
         pwd
