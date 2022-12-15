@@ -48,7 +48,7 @@ jobs:
         cd cpp/review_about_cpp
         pwd
         ls
-        echo _readme_about_this_project.md > README.md
+        cat _readme_about_this_project.md > README.md
 
         cmake -S . -B build
         cmake --build build
