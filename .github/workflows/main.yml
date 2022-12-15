@@ -25,9 +25,11 @@ jobs:
         pwd
         ls
         echo "# algorithm_box's CI CD test
-        this README made by github actions" >README.md
+        this README made by github actions
+        " >README.md
         clang++ main.cpp -o first_CICD_experience.out
-        ./first_CICD_experience.out>README.md
+        ./first_CICD_experience.out|sed -e s/\n>README.md
+        sed -e s/\\n/\\n\\n/g README.md
         cd ../
         pwd
         echo "${{ github.actor }}"
