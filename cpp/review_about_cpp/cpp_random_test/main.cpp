@@ -71,6 +71,9 @@ int main()
     std::cout << std::endl;
 
     std::cout << "### processing time on generate " << std::endl;
+    std::cout<<"I'll check for 10^8 generating time "<<std::endl<<std::endl;
+        std::cout<<"Note: Be aware that compiler optimizations may be at work"<<std::endl<<std::endl;
+    
     std::mt19937 engine_C1(1);
     std::random_device rnd2;
 
@@ -86,7 +89,7 @@ int main()
     end = std::chrono::system_clock::now();
 
     double mt_time = static_cast<double>(std::chrono::duration_cast<std::chrono::microseconds>(end - start).count() / 1000.0);
-    std::cout << "mt19937 time is " << mt_time << "[ms]" << std::endl;
+    std::cout << "mt19937 time is " << mt_time << "[ms]" << std::endl<<std::endl;
 
     start = std::chrono::system_clock::now();
 
@@ -98,5 +101,5 @@ int main()
     end = std::chrono::system_clock::now();
 
     double rnd_time = static_cast<double>(std::chrono::duration_cast<std::chrono::microseconds>(end - start).count() / 1000.0);
-    std::cout << "mt19937 time is " << mt_time << "[ms]" << std::endl;
+    std::cout << "std::random_device time is " << rnd_time << "[ms]" << std::endl<<std::endl;
 }
