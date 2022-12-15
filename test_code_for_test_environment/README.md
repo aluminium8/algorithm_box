@@ -1,3 +1,6 @@
+# algorithm_box's CI CD test
+this README made by github actions
+
 first, I'LL input correct string
 
 Hello_world this is great string!
