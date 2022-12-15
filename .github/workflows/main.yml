@@ -19,8 +19,10 @@ jobs:
         clang++ main.cpp -o first_CICD_experience.out
         ./first_CICD_experience.out
     - name: test the github actions's behavior about make README
-      working-directory: test_code_for_test_environment
       run: |
+        pwd
+        cd test_code_for_test_environment
+        pwd
         README.md < echo "# algorithm_box's CI CD test\n this README made by github actions"
         cd ../
         git config --global user.name "${{ github.actor }}"
