@@ -1,1 +1,2 @@
-# algorithm_box's CI CD test\n this README made by github actions
+# algorithm_box's CI CD test
+this README made by github actions
