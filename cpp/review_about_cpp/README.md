@@ -13,13 +13,13 @@ detailed specifications
 ###  std::random_device(nondeterministic) 
  |name on code |0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 
 | --------------------- |--------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | 
- | (this engine can't use seed) | 4211509831 | 3943758743 | 1513173582 | 3393339719 | 891811753 | 3683313548 | 1518220508 | 181174944 | 3189149735 | 973636219 | 
+ | (this engine can't use seed) | 1058117841 | 4074556585 | 2182788189 | 2570023387 | 2650295689 | 929481832 | 1469802265 | 2039464542 | 1118118905 | 3443638078 | 
 ### processing time on generate 
 I'll check for 10^8 generating time 
 
-Note: Be aware that compiler optimizations may be at work
+Note: Be aware that compiler optimizations killed
 
-mt19937 time is 1652.49[ms]
+mt19937 time is 1921.84[ms]
 
-std::random_device time is 1651.63[ms]
+std::random_device time is 1915.84[ms]
 
