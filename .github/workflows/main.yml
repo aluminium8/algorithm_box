@@ -41,3 +41,13 @@ jobs:
         git commit -m 'update README.md'
         git push origin HEAD:main
 
+    - name: build and run the cpp review project
+      run: |
+        pwd
+        cd cpp/review_about_cpp
+        pwd
+        ls
+        cmake -S . -B build
+        cmake --build build
+        ./build/*.out
+        
