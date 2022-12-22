@@ -9,27 +9,47 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: install OpenCV
+    - name: now workspace check
+      run: | 
+        pwd
+        ls
+
+    - name: OpenCV cache restore
+      id: cache-opencv
+      uses: actions/cache@v3
+      env:
+        cache-name: cache-opencv
+      with:
+        path: ./opencv
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
+
+    - if: ${{ steps.cache-opencv.outputs.cache-hit != 'true' }}
+      name: OpenCV DL and build 
       run: | 
         git clone https://github.com/opencv/opencv.git
-        cd ./opencv
+        cd /home/runner/work/algorithm_box/algorithm_box/opencv
         mkdir build
         cd build
         cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
         make -j7 
         sudo make install
 
-    
-    - name: label change test1
+    - name: now workspace check
       run: | 
         pwd
         ls
+
     - name: test the github actions's behavior about cpp
       run: |
         cd test_code_for_test_environment
         clang++ main.cpp -o first_CICD_experience.out
         ./first_CICD_experience.out
         rm -f ./first_CICD_experience.out
+
     - name: test the github actions's behavior about make README
       run: |
         pwd
@@ -60,7 +80,6 @@ jobs:
         pwd
         ls
         cat _readme_about_this_project.md > README.md
-
         cmake -S . -B build
         cmake --build build
         ./build/*.out >> README.md
