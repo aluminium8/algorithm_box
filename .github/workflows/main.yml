@@ -11,16 +11,13 @@ jobs:
     - uses: actions/checkout@v3
     - name: install OpenCV
       run: | 
-        wget https://github.com/opencv/opencv/archive/3.2.0.zip
-        unzip 3.2.0.zip
+        wget -O opencv.zip https://github.com/opencv/opencv/archive/4.x.zip
+        unzip opencv.zip
         cd opencv-3.2.0
         mkdir build
         cd build
-        cmake .. -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local
-        make -j $(($(nproc) + 1))
-        sudo make install
-        sudo /bin/bash -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
-        sudo ldconfig
+        cmake  ../opencv-4.x
+        cmake --build .
     - name: label change test1
       run: | 
         pwd
