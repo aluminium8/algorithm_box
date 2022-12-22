@@ -89,8 +89,10 @@ jobs:
         ls
         cmake -S . -B build
         cmake --build build
-        ./build/*.out
-       
+        cat _readme_about_this_project.md > README.md
+        cmake -S . -B build
+        cmake --build build
+        ./build/*.out >> README.md
     - name: build and run the cpp review project
       run: |
         pwd
