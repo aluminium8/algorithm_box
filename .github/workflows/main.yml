@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       OpenCV_DIR: ${{ github.workspace }}/opencv/build/
-      
+      BOOST_DIR: ${{ github.workspace }}/boost/build/
     steps:
 
     - uses: actions/checkout@v3
@@ -40,7 +40,33 @@ jobs:
         cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
         make -j7 
         sudo make install
- 
+
+    - name: Boost cache restore
+      id: cache-boost
+      uses: actions/cache@v3
+      env: 
+        cache-name: cache-boost
+      with:
+        path: ./boost
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-build-${{ env.cache-name }}-
+          ${{ runner.os }}-build-
+          ${{ runner.os }}-
+
+    - if: ${{ steps.cache-boost.outputs.cache-hit != 'true' }}
+      name: boost DL and build 
+      run: | 
+        wget https://boostorg.jfrog.io/artifactory/main/release/1.81.0/source/boost_1_81_0.tar.bz2
+        tar --bzip2 -xf /path/to/boost_1_81_0.tar.bz2
+        pwd
+        ls -ashl
+        cd boost_1_81_0
+        pwd
+        ls -ashl
+        ./bootstrap.sh
+        ./b2 install -j7 
+
     - name: now workspace check
       run: | 
         pwd
