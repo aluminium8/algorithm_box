@@ -65,8 +65,8 @@ jobs:
         pwd
         ls -ashl
         ./bootstrap.sh
-        mkdir install
-        ./b2 install -j7 --prefix=${{ github.workspace }}/boost/install
+        mkdir installdir
+        ./b2 install -j7 --prefix=${{ github.workspace }}/boost/installdir
 
     - name: now workspace check
       run: | 
