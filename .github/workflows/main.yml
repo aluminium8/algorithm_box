@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env: 
       OpenCV_DIR: ${{ github.workspace }}/opencv/build/
-      BOOST_DIR: ${{ github.workspace }}/boost/build/
+      BOOST_ROOT: ${{ github.workspace }}/boost/build/
     steps:
 
     - uses: actions/checkout@v3
@@ -58,7 +58,7 @@ jobs:
       name: boost DL and build 
       run: | 
         wget https://boostorg.jfrog.io/artifactory/main/release/1.81.0/source/boost_1_81_0.tar.bz2
-        tar --bzip2 -xf /path/to/boost_1_81_0.tar.bz2
+        tar --bzip2 -xf .//boost_1_81_0.tar.bz2
         pwd
         ls -ashl
         cd boost_1_81_0
