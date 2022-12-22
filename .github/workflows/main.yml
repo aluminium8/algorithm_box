@@ -89,6 +89,7 @@ jobs:
         ls
         cmake -S . -B build
         cmake --build build
+        ./build/*.out
        
     - name: build and run the cpp review project
       run: |
