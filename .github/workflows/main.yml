@@ -81,6 +81,7 @@ jobs:
       run: |
         pwd
         find ./ -name "OpenCVConfig.cmake"
+        export PATH=$PATH:/home/runner/work/algorithm_box/algorithm_box/opencv/build/OpenCVConfig.cmake
         cd cpp/review_about_cpp
         pwd
         ls
@@ -94,5 +95,5 @@ jobs:
         git status
         git commit -m 'update README.md' || exit 0
         git push origin HEAD:main
-        
+
         
