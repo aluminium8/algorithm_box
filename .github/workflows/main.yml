@@ -80,6 +80,16 @@ jobs:
         git commit -m 'update README.md' || exit 0
         git push origin HEAD:main
 
+    - name: test the github actions's behavior about library load
+      run: |
+        pwd
+        
+        cd built_library_load_and_cache_test
+        pwd
+        ls
+        cmake -S . -B build
+        cmake --build build
+       
     - name: build and run the cpp review project
       run: |
         pwd
