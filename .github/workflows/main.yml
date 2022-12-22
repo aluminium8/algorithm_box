@@ -14,7 +14,9 @@ jobs:
         wget https://github.com/opencv/opencv/archive/3.2.0.zip
         unzip 3.2.0.zip
         cd opencv-3.2.0
-        cmake -D CMAKE_BUILD_TYPE=RELEASE ||cat /home/runner/work/algorithm_box/algorithm_box/opencv-3.2.0/CMakeFiles/CMakeOutput.log
+        mkdir build
+        cd build
+        cmake .. -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local
         make -j $(($(nproc) + 1))
         sudo make install
         sudo /bin/bash -c 'echo "/usr/local/lib" > /etc/ld.so.conf.d/opencv.conf'
