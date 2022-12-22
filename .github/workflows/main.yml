@@ -116,8 +116,6 @@ jobs:
         cd built_library_load_and_cache_test
         pwd
         ls
-        cmake -S . -B build
-        cmake --build build
         cat _readme_about_this_project.md > README.md
         cmake -S . -B build
         cmake --build build
@@ -139,6 +137,9 @@ jobs:
         cat _readme_about_this_project.md > README.md
         cmake -S . -B build
         cmake --build build
+        cd build
+        ls -ashl 
+        cd ../
         ./build/*.out >> README.md
         git config --global user.name "${{github.actor}}"
         git config --global user.email "${{github.actor}}@users.noreply.github.com"
