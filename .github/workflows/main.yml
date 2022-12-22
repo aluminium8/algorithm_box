@@ -80,7 +80,7 @@ jobs:
     - name: build and run the cpp review project
       run: |
         pwd
-        find / -name "OpenCVConfig.cmake"
+        find ./ -name "OpenCVConfig.cmake"
         cd cpp/review_about_cpp
         pwd
         ls
@@ -94,4 +94,5 @@ jobs:
         git status
         git commit -m 'update README.md' || exit 0
         git push origin HEAD:main
+        
         
