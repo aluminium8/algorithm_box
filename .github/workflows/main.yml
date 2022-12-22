@@ -58,14 +58,15 @@ jobs:
       name: boost DL and build 
       run: | 
         wget https://boostorg.jfrog.io/artifactory/main/release/1.81.0/source/boost_1_81_0.tar.bz2
-        tar --bzip2 -xf .//boost_1_81_0.tar.bz2
+        tar --bzip2 -xf ./boost_1_81_0.tar.bz2
         pwd
         ls -ashl
         cd boost_1_81_0
         pwd
         ls -ashl
         ./bootstrap.sh
-        ./b2 install -j7 
+        mkdir install
+        ./b2 install -j7 --prefix=${{ github.workspace }}/boost/install
 
     - name: now workspace check
       run: | 
