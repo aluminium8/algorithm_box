@@ -6,5 +6,13 @@ message(STATUS "opencv include path '${OpenCV_INCLUDE_DIRS}'")
 message(STATUS "opencv library are '${OpenCV_LIBS}'")
 
 add_compile_options(-std=c++20 -O0 -Wall)
+
+##OpenCV関係のインクルードディレクトリのパスを設定
+include_directories(
+    ${OpenCV_INCLUDE_DIRS}
+)
+
+
 add_executable(opencv_loadtest.out opencv/main.cpp)
+target_link_libraries(opencv_loadtest.out ${OpenCV_LIBS})
 
