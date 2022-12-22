@@ -7,7 +7,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env: 
-      OpenCV_DIR: ${{ github.workspace }}/algorithm_box/opencv/build/
+      OpenCV_DIR: ${{ github.workspace }}/opencv/build/
       
     steps:
 
