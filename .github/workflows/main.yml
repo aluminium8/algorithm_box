@@ -9,7 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
+    - name: Setup OpenCV
+      uses: Dovyski/setup-opencv-action@v1.1
+  
 
     - name: label change test1
       run: | 
