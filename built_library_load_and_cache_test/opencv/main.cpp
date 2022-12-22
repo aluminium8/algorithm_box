@@ -6,7 +6,7 @@ using namespace std;
  
 int main( int argc, char** argv )
 {
-  cout<<" ## opencv"
+  cout<<"## opencv"<<std::endl;
   cout << "OpenCV version : " << CV_VERSION << endl;
 
 }
