@@ -7,7 +7,7 @@ jobs:
 
     runs-on: ubuntu-latest
     env: 
-      OpenCV_DIR: ${{github.action_path}}opencv/build/
+      OpenCV_DIR:  $GITHUB_ACTION_PATH/opencv/build/
     steps:
 
     - uses: actions/checkout@v3
