@@ -7,7 +7,8 @@ jobs:
 
     runs-on: ubuntu-latest
     env: 
-      OpenCV_DIR:  $GITHUB_ACTION_PATH/opencv/build/
+      OpenCV_DIR: /home/runner/work/algorithm_box/algorithm_box/opencv/build/
+      
     steps:
 
     - uses: actions/checkout@v3
