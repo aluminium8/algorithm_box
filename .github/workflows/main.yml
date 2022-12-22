@@ -6,8 +6,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env: 
+      OpenCV_DIR: ${{GITHUB_ACTION_PATH}}opencv/build/
     steps:
+
     - uses: actions/checkout@v3
     - name: now workspace check
       run: | 
@@ -81,7 +83,6 @@ jobs:
       run: |
         pwd
         find ./ -name "OpenCVConfig.cmake"
-        export OpenCV_DIR=/home/runner/work/algorithm_box/algorithm_box/opencv/build/
         echo $OpenCV_DIR
         cd cpp/review_about_cpp
         pwd
