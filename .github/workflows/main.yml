@@ -12,7 +12,7 @@ jobs:
     - name: now workspace check
       run: | 
         pwd
-        ls
+        ls -ashl
 
     - name: OpenCV cache restore
       id: cache-opencv
@@ -41,7 +41,7 @@ jobs:
     - name: now workspace check
       run: | 
         pwd
-        ls
+        ls -ashl
 
     - name: test the github actions's behavior about cpp
       run: |
