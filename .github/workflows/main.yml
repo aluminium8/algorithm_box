@@ -9,15 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - uses: Dovyski/setup-opencv-action@v1.1
-      with:
-        opencv-version: '4.0.0'
-        
-    - name: opencv cache
-      id: opencv-cache
-      run: | 
-        pwd
-        ls    
+
+
     - name: label change test1
       run: | 
         pwd
