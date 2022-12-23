@@ -13,7 +13,7 @@ detailed specifications
 ###  std::random_device(nondeterministic) 
  |```name on code```|0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 
 | --------------------- |--------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | --------------- | 
- |``` (this engine can't use seed) ```| 1492596607 | 3607588134 | 4229125993 | 2947870341 | 1662053577 | 417606322 | 3010855497 | 541160602 | 1969721490 | 238652377 | 
+ |``` (this engine can't use seed) ```| 3242659380 | 1123686211 | 1549928563 | 3011173538 | 1713415244 | 654573256 | 433659885 | 1882099752 | 3122190175 | 1132351779 | 
 ### processing time on generate 
 I'll check for 5*10^6 generating time on github actions machine
 
@@ -21,7 +21,7 @@ this value is change at this folder pushed
 
 __Note: Be aware that compiler optimizations killed and Length of processing time is not stable__
 
-mt19937 time is 96.999[ms]
+mt19937 time is 82.237[ms]
 
-std::random_device time is 4945.1[ms]
+std::random_device time is 3388.75[ms]
 
