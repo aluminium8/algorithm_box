@@ -122,6 +122,7 @@ jobs:
         cd build
         ls -ashl 
         cd ../
+        ./build/*.out
         ./build/*.out >> README.md
         git config --global user.name "${{github.actor}}"
         git config --global user.email "${{github.actor}}@users.noreply.github.com"
