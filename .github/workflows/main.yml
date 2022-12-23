@@ -121,8 +121,9 @@ jobs:
         cmake --build build
         cd build
         ls -ashl 
+        ./*.out
         cd ../
-        ./build/*.out
+        sh execute_program_bin.sh
         ./build/*.out >> README.md
         git config --global user.name "${{github.actor}}"
         git config --global user.email "${{github.actor}}@users.noreply.github.com"
